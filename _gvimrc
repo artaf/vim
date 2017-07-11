@@ -1,0 +1,58 @@
+source $VIMRUNTIME/vimrc_example.vim
+source $VIMRUNTIME/mswin.vim
+behave mswin
+
+autocmd! bufwritepost $MYVIMRC source $MYVIMRC " reload after saving
+" set ident, tabs, blocks
+set tabstop=4
+set shiftwidth=4
+set smarttab
+set et
+set backspace=indent,eol,start
+set wrap
+set ai "
+set cin
+
+"set list
+
+" searching
+"set showmatch
+"set hlsearch
+"set incsearch
+"set ignorecase
+
+"set lz
+
+set noswapfile
+
+set ffs=unix,dos,mac
+set fencs=utf-8,cp1251,koi8-r,ucs-2,cp866
+
+if !has('gui_running')
+set mouse=
+endif
+
+if has('gui')
+"colorscheme darkblue
+if has('win32')
+set guifont=Lucida_Console:h12:cRUSSIAN::
+else
+set guifont=Terminus\ 14
+endif
+endif
+
+"autocmd FileType python set omnifunc=pythoncomplete#Complete
+"autocmd FileType tt2html set omnifunc=htmlcomplete#CompleteTags
+"autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+"autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+"autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+"autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
+"autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+"autocmd FileType c set omnifunc=ccomplete#Complete
+"set completeopt=menu
+
+set keymap=russian-jcukenwin
+set iminsert=0
+set imsearch=0
+highlight lCursor guifg=NONE guibg=Cyan
+
